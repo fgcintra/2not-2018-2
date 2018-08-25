@@ -25,6 +25,45 @@
 
          */
 
+         // parseFloat(): lê uma string e TENTA converter para um valor numérico com
+         // casas decimais. Entende o ponto (.) como separador decimal
+         
+         // Entrada dos dois números reais
+         let n1 = parseFloat(prompt('Primeiro número (use ponto como separador decimal): '));
+         let n2 = parseFloat(prompt('Segundo número (use ponto como separador decimal:'));
+
+         // Entrada do operador
+         let op = prompt('Informe o operador aritmético (+, -, *, x, X, /, : ou %):');
+
+         let res; // Resultado
+
+         // Seleção do operador via if... else if... else
+         if(op == '+') {
+            res = n1 + n2;
+         }
+         else if(op == '-') {
+            res = n1 - n2;
+         }
+         else if(op == '*' || op == 'x' || op == 'X') {
+            res = n1 * n2;
+         }
+         else if(op == '/' || op == ':') {
+            if (n2 == 0) {
+               alert('Não é possível dividir por zero!');
+            }
+            else {
+               res = n1 / n2;
+            }
+         }
+         else if(op == '%') {
+            res = n1 % n2;
+         }
+         else {
+            alert('Este não é um operador válido');
+         }
+
+         document.write(`O resultado de ${n1} ${op} ${n2} é igual a ${res}.`);
+
       </script>
    </head>
    <body>

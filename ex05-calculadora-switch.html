@@ -14,6 +14,52 @@
 
          */
 
+      // Entrada dos dois números reais
+      let n1 = parseFloat(prompt('Primeiro número (use ponto como separador decimal): '));
+      let n2 = parseFloat(prompt('Segundo número (use ponto como separador decimal:'));
+
+      // Entrada do operador
+      let op = prompt('Informe o operador aritmético (+, -, *, x, X, /, : ou %):');
+
+      let res; // Resultado
+
+      // Seleção do operador via switch
+      switch(op) {
+         case '+':
+            res = n1 + n2;
+            break;
+
+         case '-':
+            res = n1 - n2;
+            break;
+
+         case '*': 
+         case 'x': 
+         case 'X':
+            res = n1 * n2;
+            break;
+
+         case '/':
+         case ':':
+            if (n2 == 0) {
+               alert('Não é possível dividir por zero!');
+            }
+            else {
+               res = n1 / n2;
+            }
+            break;
+
+         case '%':
+            res = n1 % n2;
+            break;
+
+         default:
+            alert('Este não é um operador válido');
+      }
+      
+
+      document.write(`O resultado de ${n1} ${op} ${n2} é igual a ${res}.`);         
+
       </script>
    </head>
    <body>
