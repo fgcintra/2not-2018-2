@@ -17,6 +17,35 @@
 
          */
 
+         // Solução 1
+         let cont = 10;
+
+         while(cont >= -10) {
+
+            if(cont != 0) {
+               // Equivale a: document.write('99 / ' + cont + ' = ' + 99 / cont + '<br>');
+               document.write(`99 / ${cont} = ${99 / cont}<br>`);
+            }
+            
+            cont--; // cont = cont - 1
+         }
+
+         // Traço para separar
+         document.write('<hr>');
+
+         // Solução 2
+         cont = 11;
+
+         while(cont >= -10) {
+            cont--;
+            if(cont == 0) {
+               // "continue" volta para o início do loop
+               // sem executar o que vem abaixo
+               continue;
+            }
+            document.write(`99 / ${cont} = ${99 / cont}<br>`);
+         }
+
       </script>
    </head>
    <body>
