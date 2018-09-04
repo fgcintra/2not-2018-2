@@ -11,6 +11,13 @@
             Reimplemente as duas soluções do exercício 08,
             utilizando agora o loop for.
          */
+         for(let cont = 10; cont >= -10; cont--) {
+            // Salta a divisão por zero
+            if(cont == 0) {
+               continue;
+            }
+            document.write(`99 / ${cont} = ${99 / cont}<br>`);
+         }
 
       </script>
    </head>
