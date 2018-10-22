@@ -18,6 +18,24 @@
             declará-la. Em que situação a chamada funciona?
          */
 
+         // A chamada NÃO funciona
+         // alert(comparar(40, 50));
+
+         let comparar = function(n1, n2) {
+            if(n1 > n2) {
+               return -1;
+            }
+            else if (n1 == n2) {
+               return 0;
+            }
+            else {
+               return 1;
+            }
+         }
+
+         // A chamada funciona
+         alert(comparar(40, 50));
+
       </script>
    </head>
    <body>
