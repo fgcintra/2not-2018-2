@@ -64,9 +64,12 @@
          let vet1 = str1.split(' ');
          let vet2 = str1.split('r');
          let vet3 = str1.split(/[Rr]/);
-         console.log("str1.split(' '): " + vet1);
-         console.log("str1.split('r'): " + vet2);
-         console.log("str1.split(/[Rr]/): " + vet3);
+         console.log("str1.split(' '): ");
+         console.log(vet1);
+         console.log("str1.split('r'): ");
+         console.log(vet2);
+         console.log("str1.split(/[Rr]/): ");
+         console.log(vet3);
 
          // trim(): tira os espaços em branco no início e no final da string;
          let str5 = '      E viveram felizes para sempre     ';
@@ -75,13 +78,14 @@
 
          // replace(): substitui uma parte de uma string (substring) por outra. Repare
          // que, na sintaxe da função, a substring a ser substituida aparece entre barras
-         let str6 = str1.replace(/roupa/, 'rapadura');
-         console.log("str1.replace(/roupa/, 'rapadura'): " + str6);
+         let str6 = str1.replace('roupa', 'rapadura');
+         console.log("str1.replace('roupa', 'rapadura'): " + str6);
 
          // CARACTERES ESPECIAIS
 
          // \n: gera uma quebra de linha (NÃO funciona com document.write())
          console.log('Primeira linha\nSegunda linha');
+         alert('Primeira linha\nSegunda linha');
 
          // \' e \": para usar aspas simples ou duplas dentro de strings delimitadas
          // por elas mesmas
