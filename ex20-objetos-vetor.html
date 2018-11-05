@@ -27,7 +27,46 @@
            - Média da idade de todos os funcionários informados
 
       */
-   
+
+      let vetor = []; // Vetor vazio
+
+      for(;;) {
+        let func = {};  // Objeto vazio
+
+        func.nome = prompt('Nome do funcionário');
+
+        if(func.nome == '') break;
+
+        do {
+          func.idade = parseInt(prompt('Idade do funcionário:'));
+        } while(isNaN(func.idade));
+
+        do {
+          func.salario = parseFloat(prompt('Salário do funcionário'));
+        } while(isNaN(func.salario));
+
+        // Coloca o objeto no vetor
+        vetor.push(func);
+
+      }
+
+      let somaSalarios = 0, somaIdades = 0;
+
+      for(let i = 0; i < vetor.length; ++i) {
+        document.write(vetor[i].nome + '<br>');
+        document.write(vetor[i].idade + '<br>');
+        document.write(vetor[i].salario + '<br>');
+        document.write('------------------------<br>');
+        somaSalarios += vetor[i].salario;
+        somaIdades += vetor[i].idade;
+      }
+
+      let mediaSalarios = somaSalarios / vetor.length;
+      let mediaIdades = somaIdades / vetor.length;
+
+      document.write(`Soma dos salários: ${somaSalarios}<br>`);
+      document.write(`Média dos salários: ${mediaSalarios}<br>`);
+      document.write(`Média de idade: ${mediaIdades}<br>`);   
       
       </script>
 

@@ -29,6 +29,30 @@
          * Exiba os dois objetos no console. O que aconteceu? 
 
       */
+
+      let obj1 = {
+         nome: 'Irado',
+         raça: 'Chihuahua',
+         cor: 'Preto e castanho',
+         sexo: 'M',
+         'nome do pai': 'Treme-treme',
+         'nome da mãe': 'Pitchula'
+      };
+
+      // Não copia
+      //let obj2 = obj1; 
+      
+      // Copia (faz o clone do objeto)
+      let obj2 = JSON.parse(JSON.stringify(obj1)); 
+
+      obj2.nome = 'Mimi';
+      obj2.raça = 'Poodle toy';
+      obj2.sexo = 'F';
+      obj2['nome do pai'] = 'Peludo';
+      obj2['nome da mãe'] = 'Fifi';
+
+      console.log(obj1);
+      console.log(obj2);      
             
       </script>
 
