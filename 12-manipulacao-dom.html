@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf8" />
+      <title>Página de Teste</title>
+   </head>
+   <body>
+      <!-- Isto é um comentário HTML --> 
+      <h1>Minhas linguagens de programação preferidas</h1>
+
+      <ol> <!-- lista ordenada -->
+         <li>Javascript</li> <!-- item da lista -->
+         <li>PHP</li>
+         <li>Delphi</li>
+         <li>C</li>
+         <li>C++</li>
+         <li>C#</li>
+         <li>Visual Basic</li>
+      </ol>
+
+      <script>
+
+         'use strict'; // Modo "chato" do Javascript
+      
+         // Quais elementos eu tenho dentro do body do documento?
+         console.log(document.body.children); // children = filhos
+
+         // Quantos elementos tem o body do documento?
+         alert(document.body.children.length);
+
+         // Alterando o texto do H1 (que é o primeiro filho de body)
+         document.body.children[0].innerText = 'Algumas linguagens de programação';
+         document.body.firstElementChild.innerText = 'Linguagens populares';
+
+         // Exibindo o nome da tag do último filho do body
+         alert(document.body.children[document.body.children.length - 1].tagName);
+         alert(document.body.lastElementChild.tagName);
+
+         // Isolando um determinado filho do body
+         let listaOrd = document.body.children[1]; // ol está na segunda posição
+
+         // Quantos filhos (itens) tem a lista ordenada?
+         alert(`A lista ordenada tem ${listaOrd.children.length} filhos (itens)`);
+
+         // Alterando o texto do 5º item da lista
+         listaOrd.children[4].innerText = 'Java (era C++)';
+      
+      </script>      
+
+   </body>
+
+</html>
+
+
